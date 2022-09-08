@@ -5,7 +5,7 @@ const main = () => {
   return (
     <div className='Main' >
       <p>
-        Main
+        Website
       </p> 
     </div>
   )
