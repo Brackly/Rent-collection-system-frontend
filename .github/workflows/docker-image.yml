@@ -15,5 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag renti_frontend-name:v1 
+      run: |
+        docker build . --file Dockerfile --tag renti_frontend-name:v1
+        docker run --name Renti -p 3000:3000 renti_frontend-name:v1
   
