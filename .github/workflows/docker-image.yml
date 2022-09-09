@@ -21,6 +21,9 @@ jobs:
     - name: Run a docker container from the image
       run: docker run --name Renti -d -p 3000:3000 renti_frontend-name:v1
 
+    - name: Wait for the server to be up
+      run: sleep 30
+
     - name: Test the deployment
       run: curl http://localhost:3000 | grep React
 
