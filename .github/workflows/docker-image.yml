@@ -19,11 +19,11 @@ jobs:
         docker build . --file Dockerfile --tag renti_frontend-name:v1
 
     - name: Run a docker container from the image
-        docker run --name Renti -p 3000:3000 renti_frontend-name:v1
+      run: docker run --name Renti -p 3000:3000 renti_frontend-name:v1
 
     - name: Test the deployment
       run: curl http://localhost:3000 | grep React
-      
+
     - name : Terminate the docker Container
       run: docker stop Renti
 
