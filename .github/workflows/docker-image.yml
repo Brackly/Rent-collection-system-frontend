@@ -47,7 +47,7 @@ jobs:
     - name: Tag and Push docker image to Amazon ECR
       env:
         REGISTRY:  ${{ steps.login-ecr.outputs.registry }}
-        REPOSITORY: test
+        REPOSITORY: renti_frontend
       run: |
         docker tag renti_frontend:v1 818341956246.dkr.ecr.us-east-1.amazonaws.com/renti_frontend:v1
         docker push 818341956246.dkr.ecr.us-east-1.amazonaws.com/renti_frontend:v1
